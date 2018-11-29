@@ -1,0 +1,138 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+
+}
+
+canvas{
+  display:block;
+}
+
+#particles-js{
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #cf7178;
+    z-index: 9000;
+}
+
+.intro{
+  height: calc(100vh - 20em);
+}
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+
+body{
+  height: calc(100vh - 12em);
+  padding: 4em;
+  color: rgba(255,255,255,.30);
+  -webkit-text-stroke: 1px rgba(255,255,255,.30);
+  font-family: 'Space Mono', monospace;
+  background-color: rgb(25,25,25);  
+}
+
+.line-1 {
+    position: relative;
+    z-index: 9500;
+    top: 50%;  
+    width: 5em;
+    margin: 0 auto;
+    border-right: 3px solid rgba(255,255,255,.75);
+    font-size: 500%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+    pointer-events:none;        
+
+}
+
+#name-anim{
+  z-index: 9001;
+}
+.icons-header{
+  z-index: 9001;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%); 
+  position: relative;
+    z-index: 9500;
+    top: 50%;  
+    margin: 0 auto;  
+    pointer-events:none;        
+
+}
+
+
+.icons-header .icon {
+  text-align: center;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  font-size: 55px;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: all .7s;
+  pointer-events:auto;
+}
+
+.icons-header .icon:active,
+.icons-header .icon:hover {
+  color: #1a222c;
+  background: #fff
+}
+.fa {
+  padding: 50px;
+  font-size: 1000px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(9) 1s 1 normal both,
+             blinkTextCursor 600ms steps(9) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 6em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.7);}
+  to{border-right-color: transparent;}
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
